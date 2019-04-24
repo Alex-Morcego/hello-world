@@ -1,3 +1,4 @@
+--INSERT PRODUCT INFORMATION FROM PRODUCTFEEDS
 AS
 BEGIN
 
@@ -11,7 +12,7 @@ insert into TMP_DL_article_products_content_2 (CREATED_DT, companyid, MAIL_LANGU
 
     SELECT DISTINCT
         getdate() as created_dt,
-        case 
+        case
             when mail_language_id in (1,4) then 1
             when mail_language_id in (2,3,5) then 2
         end as companyid,
